@@ -3,15 +3,10 @@ import { haederData } from "../../utils/data";
 import "./header.css";
 
 const Header = () => {
-  const linkRef = useRef(null);
 
   // toggle menu
   const [toggle, setToggle] = useState(false);
 
-  const activeLinkHandler = (e) => {
-    linkRef.current.classList = "active__link nav__link";
-    console.log(linkRef.current.classNamegit);
-  };
 
   const toggleHandler = () => {
     setToggle((prev) => !prev);
@@ -31,8 +26,7 @@ const Header = () => {
                 <a
                   href={`#${item.href}`}
                   className={`nav__link `}
-                  ref={linkRef}
-                  onClick={activeLinkHandler}
+                 
                 >
                   <i className={`uil uil-${item.icons} nav__icon`}></i>
                   {item.title}
