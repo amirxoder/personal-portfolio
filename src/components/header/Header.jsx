@@ -1,12 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { haederData } from "../../utils/data";
 import "./header.css";
 
 const Header = () => {
-
   // toggle menu
   const [toggle, setToggle] = useState(false);
-
 
   const toggleHandler = () => {
     setToggle((prev) => !prev);
@@ -23,11 +21,7 @@ const Header = () => {
           <ul className="nav__list grid">
             {haederData.map((item) => (
               <li key={item.id} className="nav__item">
-                <a
-                  href={`#${item.href}`}
-                  className={`nav__link `}
-                 
-                >
+                <a href={`#${item.href}`} className={`nav__link `}>
                   <i className={`uil uil-${item.icons} nav__icon`}></i>
                   {item.title}
                 </a>

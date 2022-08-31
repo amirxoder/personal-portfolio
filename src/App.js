@@ -1,5 +1,5 @@
 import "./App.css";
-import { Header, Home, About, Skills } from "./components";
+import { Header, Home, About, Skills, Services } from "./components";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
         <Home />
         <About />
         <Skills />
+        <Services />
       </main>
     </>
   );
